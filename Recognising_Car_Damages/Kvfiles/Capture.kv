@@ -1,0 +1,39 @@
+<CaptureScreen>
+    name: "Test"
+    the_decision: _lbl_decision
+    FloatLayout:
+        Label:
+            text: "Recognise Car"
+            pos_hint: {"x":0.0, "y":0.85}
+            size_hint: 1.0, 0.2
+
+        Label:
+            id: _lbl_decision
+            text: "Conclusion"
+            pos_hint: {"x":0.0,"y":0.75}
+            size_hint: 1.0, 0.2
+
+
+        Image:
+            # this is where the video will show
+            # the id allows easy access
+            id: vid
+            size_hint: 1, 0.6
+            allow_stretch: True  # allow the video image to be scaled
+            keep_ratio: True  # keep the aspect ratio so people don't look squashed
+            pos_hint: {'center_x':0.5, 'top':0.8}
+
+        Button:
+            text: 'Next Step'
+            pos_hint: {"x":0.5, "y":0.0}
+            size_hint: 0.5, 0.2
+            font_size: 50
+            on_press: app.stop_vid()
+            on_release: root.manager.current = 'choose'
+
+        Button:
+            text:'Try Again'
+            pos_hint:{"x":0.0, "y":0.0}
+            size_hint: 0.5,0.2
+            font_size: 50
+            on_release: app.doit()

@@ -1,0 +1,53 @@
+<PhotoChoose>
+
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text: "Choose photos"
+            pos_hint: {"x":0.0, "y":0.85}
+            size_hint: 1.0, 0.2
+        Button:
+            size_hint: 1.0, 0.2
+            on_press:root.manager.current='filechooser'
+            Image:
+                id: firstimage
+                source:'plus.png'
+                x: self.parent.width * .5 - self.width * .5
+                y: self.parent.height *5.5-self.height*.5
+        Button:
+            size_hint: 1.0, 0.2
+            on_press:root.manager.current='filechooser'
+            Image:
+                id: secondimage
+                source:'plus.png'
+                x: self.parent.width * .5 - self.width * .5
+                y: self.parent.height*4.5 -self.height * .5
+        Button:
+            size_hint: 1.0, 0.2
+            on_press:root.manager.current='filechooser'
+            Image:
+                id:thirdimage
+                source:'plus.png'
+                x: self.parent.width * .5 - self.width * .5
+                y: self.parent.height*3.5 -self.height * .5
+
+        Button:
+            size_hint: 1.0, 0.2
+            on_press:root.manager.current='filechooser'
+            Image:
+                id: fourthimage
+                source:'plus.png'
+                x: self.parent.width * .5 - self.width * .5
+                y: self.parent.height*2.5 -self.height * .5
+        Button:
+            text: 'Run Algorithm'
+            pos_hint:{"x":0.0, "y": -1.0}
+            size_hint: 1.0, 0.2
+            font_size: 50
+            on_press: root.imageDamage()
+        Button:
+            text:'Back'
+            pos_hint:{"x":0.0, "y": -1.0}
+            size_hint:1.0, 0.2
+            font_size: 50
+            on_press: root.manager.current='choose'

@@ -1,0 +1,18 @@
+<ChooseScreen>
+    FloatLayout:
+        Label:
+            text: "Do you upload photo or open your camera"
+            pos_hint: {"x":0.0, "y":0.85}
+            size_hint: 1.0, 0.2
+        Button:
+            text: "Choose Photos"
+            pos_hint: {"x":0.0, "y":0.5}
+            size_hint: 1.0, 0.2
+            on_press: root.manager.current='photochoose'
+
+        Button:
+            text: "Open Camera"
+            pos_hint: {"x":0.0, "y":0.3}
+            size_hint: 1.0, 0.2
+            on_press: root.manager.current='damagelive'
+

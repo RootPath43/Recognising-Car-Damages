@@ -1,0 +1,1 @@
+'C:\\Users\\Emirhan\\python workspace\\Thesis\\Car\\TOYOTA_COROLLA_BLACK.jpg'

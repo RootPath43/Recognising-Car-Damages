@@ -1,0 +1,59 @@
+<DamageLive>
+
+
+    FloatLayout:
+        Label:
+            text: "Damages"
+            pos_hint: {"x":0.0, "y":0.85}
+            size_hint: 1.0, 0.2
+        Button:
+            text:"Back"
+            pos_hint:{"x":0.15, "y":0.80}
+            size_hint: 0.1,0.1
+            font_size: 25
+            on_press: root.Image1()
+        Button:
+            text:"Front"
+            pos_hint:{"x":0.35, "y":0.80}
+            size_hint: 0.1,0.1
+            font_size: 25
+            on_press: root.Image2()
+        Button:
+            text:"Left"
+            pos_hint:{"x":0.55, "y":0.80}
+            size_hint: 0.1,0.1
+            font_size: 25
+            on_press: root.Image3()
+        Button:
+            text:"Right"
+            pos_hint:{"x":0.75, "y":0.80}
+            size_hint: 0.1,0.1
+            font_size: 25
+            on_press: root.Image4()
+
+
+
+        Image:
+            # this is where the video will show
+            # the id allows easy access
+            id: vid2
+            size_hint: 1, 0.6
+            allow_stretch: True  # allow the video image to be scaled
+            keep_ratio: True  # keep the aspect ratio so people don't look squashed
+            pos_hint: {'center_x':0.5, 'top':0.8}
+
+        Button:
+            text: 'Stop Video'
+            pos_hint: {"x":0.5, "y":0.0}
+            size_hint: 0.5, 0.2
+            font_size: 50
+            on_press: root.stop_vid()
+            on_release: root.manager.current = 'choose'
+
+        Button:
+            text:'Run'
+            pos_hint:{"x":0.0, "y":0.0}
+            size_hint: 0.5,0.2
+            font_size: 50
+            on_release: root.runner()
+

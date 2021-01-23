@@ -1,0 +1,17 @@
+<FileChooser>
+    FloatLayout:
+        FileChooserListView:
+            id: filechooser
+        Button:
+            text: 'Back'
+            pos_hint: {"x":0.5, "y":0.0}
+            size_hint: 0.5, 0.2
+            font_size: 50
+            on_press: root.manager.current = 'photochoose'
+        Button:
+            text: 'Choose'
+            post_hint:  {"x":0.6, "y":0.0}
+            size_hint: 0.5, 0.2
+            font_size: 50
+            on_press: root.selected(filechooser.path, filechooser.selection)
+            on_release: root.manager.current='photochoose'
